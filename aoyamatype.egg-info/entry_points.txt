@@ -1,2 +1,0 @@
-[console_scripts]
-aoyamatype = aoyamatype.typing_game:main
