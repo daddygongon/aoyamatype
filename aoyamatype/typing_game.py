@@ -216,7 +216,7 @@ def skill_check(word_list_path):
 def play_typing_game(lines, file_name):
     total_words = 0
     index = 0
-    total_time = 20  # 制限時間（秒）
+    total_time = 60  # 制限時間（秒）
     start_time = time.time()
 
     print("タイピングゲームへようこそ！")
