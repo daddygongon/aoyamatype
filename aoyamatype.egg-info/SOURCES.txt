@@ -1,0 +1,9 @@
+README.md
+setup.py
+aoyamatype/__init__.py
+aoyamatype/typing_game.py
+aoyamatype.egg-info/PKG-INFO
+aoyamatype.egg-info/SOURCES.txt
+aoyamatype.egg-info/dependency_links.txt
+aoyamatype.egg-info/entry_points.txt
+aoyamatype.egg-info/top_level.txt
