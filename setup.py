@@ -1,23 +1,26 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='aoyamatype',
-    version='1.1.0',  # バージョンアップで管理しやすくなります
+    name="aoyamatype",
+    version="0.1.0",
     packages=find_packages(),
-    install_requires=[
-        'matplotlib',  # グラフ描画のために必要なライブラリ
-    ],
+    include_package_data=True,
     entry_points={
         'console_scripts': [
-            'aoyamatype=aoyamatype:main',  # メイン実行ファイルと関数名を指定
+            'aoyamatype = aoyamatype.typing_game:main',
         ],
     },
     package_data={
-        '': ['*.txt', '*.list'],  # 例: 必要なファイルのパターンを指定
+        '': ['data/*.txt'],
     },
-    include_package_data=True,
+    install_requires=[
+        # 必要な依存関係があればここに記述
+        "matplotlib"
+    ],
     classifiers=[
         'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
+    python_requires='>=3.6',
 )
