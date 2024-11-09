@@ -267,7 +267,7 @@ def show_help():
     print("https://kwanseio365-my.sharepoint.com/:u:/g/personal/ijv85378_nuc_kwansei_ac_jp/EXOuTKW9DtxHujQPLmjbWYYByXTgE1yy5hx5fHEYjZZG5A?e=kbngES")
     print("最初に　aoyamatype -d [PATH]　を実行してください。PATHはダウンロードしたdata.zipのものです。")
     print("\nコマンド一覧:")
-    print("  -t          タイピング履歴を表示")
+    print("  -r          タイピング履歴を表示")
     print("  -c          スキルチェックを開始")
     print("  -d [PATH]   data.zip を text_data フォルダに展開")
     print("  <file_number> ファイル番号でタイピングを開始")
@@ -278,7 +278,7 @@ def main():
 
     # オプションを追加
     parser.add_option("-d", "--data", dest="zip_file_path", help="data.zip を text_data フォルダに展開")
-    parser.add_option("-t", "--history", action="store_true", dest="history", help="タイピング履歴を表示")
+    parser.add_option("-r", "--record", action="store_true", dest="record", help="タイピング履歴を表示")
     parser.add_option("-c", "--check", action="store_true", dest="check", help="スキルチェックを開始")
 
     # 引数を解析
@@ -287,7 +287,7 @@ def main():
     # オプションに基づく処理
     if options.zip_file_path:
         extract_zip_to_text_data(options.zip_file_path)
-    elif options.history:
+    elif options.record:
         print_log()
     elif options.check:
         word_list_path = get_data_file_path('word.list')
@@ -309,8 +309,9 @@ def main():
         lines = load_lines_from_file(text_file_path)
         play_typing_game(lines, text_file_name)
     else:
-        show_help()  # 引数がない場合はコマンド一覧を表示
+        show_help()
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
