@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import zipfile
 from pathlib import Path
 import optparse
+import shutil
 
 def load_lines_from_file(file_path):
     "読み込んだファイルを一行づつ返す"
@@ -249,44 +250,62 @@ def play_typing_game(lines, file_name):
     # セッションのデータを記録
     record_session_data(file_name, total_words, total_time)
 
-def extract_zip_to_text_data(zip_path):
-    """指定された zip ファイルを text_data フォルダに展開"""
+def extract_data_to_text_data(data_path):
+    """aoyamatypedata または aoyamatypedata.zip の中身を text_data フォルダに展開"""
     text_data_directory = get_text_data_directory()
-    
-    if not os.path.exists(zip_path):
-        print(f"Error: '{zip_path}' が見つかりません。")
+
+    # データパスがファイル（zipファイル）かディレクトリかをチェック
+    if os.path.isfile(data_path) and data_path.endswith('.zip'):
+        # ZIPファイルの場合は解凍し、aoyamatypedataフォルダをスキップして中身を展開
+        with zipfile.ZipFile(data_path, 'r') as zip_ref:
+            for member in zip_ref.namelist():
+                # "aoyamatypedata/" を除いて展開
+                member_path = Path(member)
+                if member_path.parts[0] == 'aoyamatypedata':
+                    # 中のファイルやフォルダのみを text_data に展開
+                    target_path = text_data_directory / Path(*member_path.parts[1:])
+                    if member.endswith('/'):
+                        target_path.mkdir(parents=True, exist_ok=True)
+                    else:
+                        with open(target_path, 'wb') as target_file:
+                            target_file.write(zip_ref.read(member))
+        print(f"'{data_path}' の内容を {text_data_directory} に解凍しました。")
+    elif os.path.isdir(data_path):
+        # フォルダの場合はその中身をコピー
+        for item in os.listdir(data_path):
+            source_path = os.path.join(data_path, item)
+            destination_path = os.path.join(text_data_directory, item)
+            if os.path.isdir(source_path):
+                shutil.copytree(source_path, destination_path, dirs_exist_ok=True)
+            else:
+                shutil.copy2(source_path, destination_path)
+        print(f"'{data_path}' の内容を {text_data_directory} にコピーしました。")
+    else:
+        print(f"Error: '{data_path}' は有効なフォルダまたはZIPファイルではありません。")
         sys.exit(1)
-    
-    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-        zip_ref.extractall(text_data_directory)
-    print(f"'{zip_path}' を {text_data_directory} に展開しました。")
+
 
 def show_help():
     """コマンド一覧と使用方法を表示"""
-    print("以下のURLからdata.zipをダウンロードしてください")
+    print("以下のURLから aoyamatypedata または aoyamatypedata.zip をダウンロードしてください")
     print("https://kwanseio365-my.sharepoint.com/:u:/g/personal/ijv85378_nuc_kwansei_ac_jp/EXOuTKW9DtxHujQPLmjbWYYByXTgE1yy5hx5fHEYjZZG5A?e=kbngES")
-    print("最初に　aoyamatype -d [PATH]　を実行してください。PATHはダウンロードしたdata.zipのものです。")
+    print("最初に aoyamatype -d [PATH] を実行してください。PATH はダウンロードした aoyamatypedata フォルダまたは aoyamatypedata.zip のパスです。")
     print("\nコマンド一覧:")
     print("  -r          タイピング履歴を表示")
     print("  -c          スキルチェックを開始")
-    print("  -d [PATH]   data.zip を text_data フォルダに展開")
-    print("  <file_number> ファイル番号でタイピングを開始")
+    print("  -d [PATH]   aoyamatypedata フォルダまたは aoyamatypedata.zip を text_data フォルダに展開")
+    print("  <file_number> ファイル番号(1~97)でタイピングを開始")
 
 def main():
-    # OptionParserオブジェクトを作成
     parser = optparse.OptionParser(usage="usage: %prog [options] <file_number>")
-
-    # オプションを追加
-    parser.add_option("-d", "--data", dest="zip_file_path", help="data.zip を text_data フォルダに展開")
+    parser.add_option("-d", "--data", dest="data_path", help="aoyamatypedata フォルダまたは aoyamatypedata.zip を text_data フォルダに展開")
     parser.add_option("-r", "--record", action="store_true", dest="record", help="タイピング履歴を表示")
     parser.add_option("-c", "--check", action="store_true", dest="check", help="スキルチェックを開始")
 
-    # 引数を解析
     (options, args) = parser.parse_args()
 
-    # オプションに基づく処理
-    if options.zip_file_path:
-        extract_zip_to_text_data(options.zip_file_path)
+    if options.data_path:
+        extract_data_to_text_data(options.data_path)
     elif options.record:
         print_log()
     elif options.check:
@@ -311,7 +330,6 @@ def main():
     else:
         show_help()
         sys.exit(1)
-
 
 if __name__ == "__main__":
     main()
