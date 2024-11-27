@@ -288,7 +288,7 @@ def extract_data_to_text_data(data_path):
 def show_help():
     """コマンド一覧と使用方法を表示"""
     print("以下のURLから aoyamatypedata または aoyamatypedata.zip をダウンロードしてください")
-    print("https://kwanseio365-my.sharepoint.com/:u:/g/personal/ijv85378_nuc_kwansei_ac_jp/EXOuTKW9DtxHujQPLmjbWYYByXTgE1yy5hx5fHEYjZZG5A?e=kbngES")
+    print("https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V")
     print("最初に aoyamatype -d [PATH] を実行してください。PATH はダウンロードした aoyamatypedata フォルダまたは aoyamatypedata.zip のパスです。")
     print("\nコマンド一覧:")
     print("  -r          タイピング履歴を表示")
