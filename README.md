@@ -29,4 +29,4 @@ https://www.javadrive.jp/python/install/index3.html
 + aoyamatype -d [PATH]でzipフォルダを正常に展開できない場合は以下の点をもう一度確認してください。
 1. フォルダの名称がdata.zipになっているか
 2. ダウンロードしたdataフォルダがzip形式になっているか
-3. PATHが本当にdata.zipのものになっているか
+3. PATHが本当にdata.zipのものになっているか(フォルダを右クリックでパスのコピーがあるはずです)
