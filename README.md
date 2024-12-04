@@ -2,12 +2,25 @@
 
 
 インストール方法：
-pip install git+https://github.com/37021463/aoyamatype.git　以上のコマンドを実行してください。
-gitがない場合はgitをインストールしてください。
+pip install git+https://github.com/37021463/aoyamatype.git
+以上のコマンドを実行してください。
 
-最初にURL；https://kwanseio365-my.sharepoint.com/:u:/g/personal/ijv85378_nuc_kwansei_ac_jp/EXOuTKW9DtxHujQPLmjbWYYByXTgE1yy5hx5fHEYjZZG5A?e=kbngES からdata.zipをダウンロードしてください。
-aoyamatype -d [PATH] PATHはダウンロードしたdata.zipとし、コマンドを入力してください。
+最初にURL:https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V からdata.zipをダウンロードしてください。
+
+次にaoyamatype -d [PATH] PATHはダウンロードしたdata.zipのものとし、コマンドを入力してください。
 
 エラー：
-コマンドのaoyamatypeがみつからない場合は、PythonのScriptがインストールされるディレクトリが環境変数PATHに含まれているか確認してください。含まれていない場合はシステム環境変数の編集でスクリプトのディレクトリパスを追加してください。
+pip install git+https://github.com/37021463/aoyamatype.git
+が実行できない場合は以下のURLから自分のPCにあったgitをダウンロードしてください。
+https://git-scm.com/
+
+インストール時に
+[WARNING: The script aoyamatype.exe is installed in 'C:\Users\AppData\...\Python311\Scripts' which is not on PATH.
+Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.]
+このような警告文が表示される場合はPythonのScriptがインストールされるディレクトリが環境変数PATHに含まれていません。
+環境変数PATHに警告文で表示されたPATHを追加してください。
 Unix系OSでは、~/.local/binをPATHに追加します。
+
+aoyamatype -d [PATH]が実行できない場合は以下の点をもう一度確認してください・
+・ダウンロードしたdataフォルダがzip形式になっているか
+・PATHが本当にdata.zipのものになっているか
