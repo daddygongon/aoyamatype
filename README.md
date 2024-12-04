@@ -19,7 +19,7 @@ aoyamatype と打つことでコマンド一覧が表示されます。
 が実行できずgitがない場合は以下のURLから自分のPCにあったgitをダウンロードしてください。  
 https://git-scm.com/
 
-+ インストール時に以下のような警告文が表示される場合  
++ インストール時に以下のような警告文が表示される場合、aoyamatypeと打ってもコマンドが見つからない場合  
 [WARNING: The script aoyamatype.exe is installed in 'C:\Users\...\Python311\Scripts' which is not on PATH.]  
 PythonのScriptがインストールされるディレクトリが環境変数PATHに含まれていません。  
 環境変数PATHに警告文で表示されたPATHを追加してください。    
@@ -27,6 +27,6 @@ PythonのScriptがインストールされるディレクトリが環境変数PA
 https://www.javadrive.jp/python/install/index3.html  
 
 + aoyamatype -d [PATH]でzipフォルダを正常に展開できない場合は以下の点をもう一度確認してください。
-1. ダウンロードしたdataフォルダがzip形式になっているか
-2. PATHが本当にdata.zipのものになっているか
-3. フォルダの名称がdata.zipになっているか
+1. フォルダの名称がdata.zipになっているか
+2. ダウンロードしたdataフォルダがzip形式になっているか
+3. PATHが本当にdata.zipのものになっているか
