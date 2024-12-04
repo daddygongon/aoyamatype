@@ -5,10 +5,7 @@
 ---
 ### インストール方法
 以下のコマンドを実行してください:
-
-
 pip install git+https://github.com/37021463/aoyamatype.git
-
 
 最初にURL:https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V からdata.zipをダウンロードしてください。
 
@@ -19,6 +16,7 @@ pip install git+https://github.com/37021463/aoyamatype.git
 ### エラーと対策
 pip install git+https://github.com/37021463/aoyamatype.git
 が実行できない場合は以下のURLから自分のPCにあったgitをダウンロードしてください。
+
 https://git-scm.com/
 
 インストール時に
@@ -28,6 +26,6 @@ Consider adding this directory to PATH or, if you prefer to suppress this warnin
 環境変数PATHに警告文で表示されたPATHを追加してください。
 Unix系OSでは、~/.local/binをPATHに追加します。
 
-aoyamatype -d [PATH]が実行できない場合は以下の点をもう一度確認してください・
-・ダウンロードしたdataフォルダがzip形式になっているか
-・PATHが本当にdata.zipのものになっているか
+aoyamatype -d [PATH]が実行できない場合は以下の点をもう一度確認してください。
+1. ダウンロードしたdataフォルダがzip形式になっている
+2. PATHが本当にdata.zipのものになっているか
