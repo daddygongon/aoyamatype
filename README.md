@@ -3,7 +3,7 @@
 **aoyamatype** は、タイピング練習用の Python パッケージです。コマンドラインからタイピング練習ができ、スキル向上をサポートします。
 
 ---
-## インストール方法
+### インストール方法
 以下のコマンドを実行してください:
 
 
@@ -16,7 +16,7 @@ pip install git+https://github.com/37021463/aoyamatype.git
 
 ---
 
-## エラーと対策
+### エラーと対策
 pip install git+https://github.com/37021463/aoyamatype.git
 が実行できない場合は以下のURLから自分のPCにあったgitをダウンロードしてください。
 https://git-scm.com/
