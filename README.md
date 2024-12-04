@@ -1,15 +1,22 @@
 # AoyamaType
 
+**aoyamatype** は、タイピング練習用の Python パッケージです。コマンドラインからタイピング練習ができ、スキル向上をサポートします。
 
-インストール方法：
+---
+##インストール方法
+以下のコマンドを実行してください:
+
+'''bash
 pip install git+https://github.com/37021463/aoyamatype.git
-以上のコマンドを実行してください。
+
 
 最初にURL:https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V からdata.zipをダウンロードしてください。
 
 次にaoyamatype -d [PATH] PATHはダウンロードしたdata.zipのものとし、コマンドを入力してください。
 
-エラー：
+---
+
+##エラーと対策
 pip install git+https://github.com/37021463/aoyamatype.git
 が実行できない場合は以下のURLから自分のPCにあったgitをダウンロードしてください。
 https://git-scm.com/
