@@ -4,12 +4,13 @@
 
 ---
 ### インストール方法
-以下のコマンドを実行してください:
+以下のコマンドを実行してください  
 pip install git+https://github.com/37021463/aoyamatype.git
 
 以下のURLからdata.zipをダウンロードしてください。  
 https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V  
-次にaoyamatype -d [PATH] PATHはダウンロードしたdata.zipのものとし、コマンドを入力してください。
+次にaoyamatype -d [PATH] PATHはダウンロードしたdata.zipのものとし、コマンドを入力してください。  
+aoyamatype と打つことでコマンド一覧が表示されます。
 
 ---
 
