@@ -23,11 +23,11 @@ https://git-scm.com/
 [WARNING: The script aoyamatype.exe is installed in 'C:\Users\...\Python311\Scripts' which is not on PATH.]  
 PythonのScriptがインストールされるディレクトリが環境変数PATHに含まれていません。  
 環境変数PATHに警告文で表示されたPATHを追加してください。  
-Unix系OSでは、~/.local/binをPATHに追加します。
-
-詳しくは以下のサイトを参考にしてください。  
+Unix系OSでは、~/.local/binをPATHに追加します。  
+詳しくは以下のサイトを参考にしてみてください。  
 https://www.javadrive.jp/python/install/index3.html  
 
 + aoyamatype -d [PATH]でzipフォルダを正常に展開できない場合は以下の点をもう一度確認してください。
 1. ダウンロードしたdataフォルダがzip形式になっているか
 2. PATHが本当にdata.zipのものになっているか
+3. フォルダの名称がdata.zipになっているか
