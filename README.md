@@ -7,9 +7,9 @@
 以下のコマンドを実行してください  
 pip install git+https://github.com/37021463/aoyamatype.git
 
-以下の[URL](https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V  
-)からdata.zipをダウンロードしてください。  
-https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V  
+こちらの[URL](https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V  
+)からdata.zipをダウンロードしてください。    
+
 次にaoyamatype -d [PATH] (PATHはダウンロードしたdata.zipのもの)とし、コマンドを入力してください。  
 aoyamatype と打つことでコマンド一覧が表示されます。
 
@@ -17,15 +17,14 @@ aoyamatype と打つことでコマンド一覧が表示されます。
 
 ### エラーと対策
 + pip install git+https://github.com/37021463/aoyamatype.git
-が実行できずgitがない場合は以下のURLから自分のPCにあったgitをダウンロードしてください。  
-https://git-scm.com/
+が実行できずgitがない場合は以下の[URL](https://git-scm.com/)から自分のPCにあったgitをダウンロードしてください。  
 
 + インストール時に以下のような警告文が表示される場合、aoyamatypeと打ってもコマンドが見つからない場合  
 [WARNING: The script aoyamatype.exe is installed in 'C:\Users\...\Python311\Scripts' which is not on PATH.]  
 PythonのScriptがインストールされるディレクトリが環境変数PATHに含まれていません。  
 環境変数PATHに警告文で表示されたPATHを追加してください。    
-詳しくは以下のサイトを参考にしてみてください。  
-https://www.javadrive.jp/python/install/index3.html  
+詳しくはこちらの[サイト](https://www.javadrive.jp/python/install/index3.html  
+)を参考にしてみてください。  
 
 + aoyamatype -d [PATH]でzipフォルダを正常に展開できない場合は以下の点をもう一度確認してください。
 1. フォルダの名称がdata.zipになっているか
