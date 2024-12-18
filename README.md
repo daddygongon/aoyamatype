@@ -10,7 +10,7 @@
 こちらの[URL](https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V  
 )からdata.zipをダウンロードしてください。    
 
-次にaoyamatype -d [PATH] (PATHはダウンロードしたdata.zipのもの)とし、コマンドを入力してください。  
+次に`aoyamatype -d [PATH]` (PATHはダウンロードしたdata.zipのもの)とし、コマンドを入力してください。  
 aoyamatype と打つことでコマンド一覧が表示されます。
 
 ---
