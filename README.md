@@ -14,10 +14,17 @@ pip install git+https://github.com/37021463/aoyamatype.git
 aoyamatype と打つことでコマンド一覧が表示されます。
 
 ---
+### コマンド一覧
+'aoyamatype'  
+'aoyamatype -c'  
+'aoyamatype -d [PATH]'  
+'aoyamatype <file_number(1~97)>'  
+
+---
 
 ### エラーと対策
 + pip install git+https://github.com/37021463/aoyamatype.git
-が実行できずgitがない場合はこちらの[URL](https://git-scm.com/)から自分のPCにあったgitをダウンロードしてください。  
+が実行できずgitがない場合はこちらの[gitのホームページ](https://git-scm.com/)から自分のPCにあったgitをダウンロードしてください。  
 
 + インストール時に以下のような警告文が表示される場合、aoyamatypeと打ってもコマンドが見つからない場合  
 [WARNING: The script aoyamatype.exe is installed in'C:\Users\...\Python311\Scripts' which is not on PATH.]  
