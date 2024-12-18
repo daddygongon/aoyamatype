@@ -3,8 +3,7 @@
 **aoyamatype** は、タイピング練習用の Python パッケージです。コマンドラインからタイピング練習ができ、スキル向上をサポートします。
 
 ---
-### インストール方法
-pythonがインストールされpipが使用できることが前提です。
+### インストール方法 
 以下のコマンドを実行してください  
 `pip install git+https://github.com/37021463/aoyamatype.git`
 
@@ -29,7 +28,7 @@ aoyamatype と打つことでコマンド一覧が表示されます。
 が実行できずgitがない場合はこちらの[gitのホームページ](https://git-scm.com/)から自分のPCにあったgitをダウンロードしてください。  
 
 + インストール時に以下のような警告文が表示される場合、aoyamatypeと打ってもコマンドが見つからない場合  
-[WARNING: The script aoyamatype.exe is installed in'C:\Users\...\Python311\Scripts' which is not on PATH.]  
+`[WARNING: The script aoyamatype.exe is installed in'C:\Users\...\Python311\Scripts' which is not on PATH.]`  
 PythonのScriptがインストールされるディレクトリが環境変数PATHに含まれていない可能性があります。  
 環境変数PATHに警告文で表示されたPATHを追加してください。    
 詳しくはこちらの[サイト](https://www.javadrive.jp/python/install/index3.html  
