@@ -15,10 +15,10 @@ aoyamatype と打つことでコマンド一覧が表示されます。
 
 ---
 ### コマンド一覧
-'aoyamatype'  
-'aoyamatype -c'  
-'aoyamatype -d [PATH]'  
-'aoyamatype <file_number(1~97)>'  
+`aoyamatype`  
+`aoyamatype -c`  
+`aoyamatype -d [PATH]`  
+`aoyamatype <file_number(1~97)>`  
 
 ---
 
