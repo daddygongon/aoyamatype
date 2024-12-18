@@ -15,11 +15,11 @@ aoyamatype と打つことでコマンド一覧が表示されます。
 
 ---
 ### コマンド一覧
-`aoyamatype`  
-`aoyamatype -r`  
-`aoyamatype -c`  
-`aoyamatype -d [PATH]`  
-`aoyamatype <file_number(1~97)>`  
+`aoyamatype`コマンド一覧表示  
+`aoyamatype -d [PATH]`data.zipの展開  
+`aoyamatype -r`履歴の表示  
+`aoyamatype -c`スキルチェック  
+`aoyamatype <file_number(1~97)>`各番号のドリル  
 
 ---
 
