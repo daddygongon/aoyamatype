@@ -270,7 +270,7 @@ def show_help():
     print("  -r          タイピング履歴を表示")
     print("  -c          スキルチェックを開始")
     print("  -d [PATH]   data.zip を text_data フォルダに展開")
-    print("  <file_number> ファイル番号でタイピングを開始")
+    print("  <file_number> ファイル番号(1~97)でタイピングを開始")
 
 def main():
     # OptionParserオブジェクトを作成
