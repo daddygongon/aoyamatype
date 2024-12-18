@@ -7,7 +7,8 @@
 以下のコマンドを実行してください  
 pip install git+https://github.com/37021463/aoyamatype.git
 
-以下の[[https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V][URL]]からdata.zipをダウンロードしてください。  
+以下の[URL](https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V  
+)からdata.zipをダウンロードしてください。  
 https://kwanseio365-my.sharepoint.com/:f:/g/personal/ijv85378_nuc_kwansei_ac_jp/ElNx956B6chEppmidaLVxm4BUMw0mT9WP4NU0cGyJH1hDA?e=uCca4V  
 次にaoyamatype -d [PATH] (PATHはダウンロードしたdata.zipのもの)とし、コマンドを入力してください。  
 aoyamatype と打つことでコマンド一覧が表示されます。
