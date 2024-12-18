@@ -17,11 +17,11 @@ aoyamatype と打つことでコマンド一覧が表示されます。
 
 ### エラーと対策
 + pip install git+https://github.com/37021463/aoyamatype.git
-が実行できずgitがない場合は以下の[URL](https://git-scm.com/)から自分のPCにあったgitをダウンロードしてください。  
+が実行できずgitがない場合はこちらの[URL](https://git-scm.com/)から自分のPCにあったgitをダウンロードしてください。  
 
 + インストール時に以下のような警告文が表示される場合、aoyamatypeと打ってもコマンドが見つからない場合  
-[WARNING: The script aoyamatype.exe is installed in 'C:\Users\...\Python311\Scripts' which is not on PATH.]  
-PythonのScriptがインストールされるディレクトリが環境変数PATHに含まれていません。  
+[WARNING: The script aoyamatype.exe is installed in'C:\Users\...\Python311\Scripts' which is not on PATH.]  
+PythonのScriptがインストールされるディレクトリが環境変数PATHに含まれていない可能性があります。  
 環境変数PATHに警告文で表示されたPATHを追加してください。    
 詳しくはこちらの[サイト](https://www.javadrive.jp/python/install/index3.html  
 )を参考にしてみてください。  
