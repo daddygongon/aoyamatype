@@ -182,6 +182,9 @@ def record_skill_check_data(total_words, total_time):
     with open(speed_data_file, 'a', encoding='utf-8') as file:
         file.write(f"{date_str},{len(total_words)},{total_time},{total_characters}\n")
 
+def print_keyboard_layout():
+    print('hoge')
+    
 def skill_check(word_list_path):
     # word.list ファイルから単語を読み込む
     words = load_lines_from_file(word_list_path)
@@ -197,6 +200,7 @@ def skill_check(word_list_path):
     # タイピングゲームの開始
     for i, word in enumerate(selected_words, 1):
         while True:
+            print_keyboard_layout()
             print(f"{i}. {word}")
             user_input = get_user_input()
 
@@ -270,7 +274,7 @@ def show_help():
     print("  -r          タイピング履歴を表示")
     print("  -c          スキルチェックを開始")
     print("  -d [PATH]   data.zip を text_data フォルダに展開")
-    print("  <file_number> ファイル番号でタイピングを開始")
+    print("  <file_number> ファイル番号(1~97)でタイピングを開始")
 
 def main():
     # OptionParserオブジェクトを作成
@@ -301,7 +305,6 @@ def main():
 
         text_file_name = f'STEP-{step_number}.txt'
         text_file_path = get_data_file_path(text_file_name)
-
         if not text_file_path.exists():
             print(f"Error: '{text_file_name}' が見つかりません。")
             sys.exit(1)
