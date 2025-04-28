@@ -183,7 +183,9 @@ def record_skill_check_data(total_words, total_time):
         file.write(f"{date_str},{len(total_words)},{total_time},{total_characters}\n")
 
 def print_keyboard_layout():
-    print('hoge')
+    print(" q \ w \ e \ r t \ y u \ i \ o \ p")
+    print("  a \ s \ d \ f g \ h j \ k \ l \ ; enter")
+    print("sh z \ x \ c \ v b \ n m \ , \ . \  shift")
     
 def skill_check(word_list_path):
     # word.list ファイルから単語を読み込む
@@ -224,6 +226,7 @@ def play_typing_game(lines, file_name):
     start_time = time.time()
 
     print("タイピングゲームへようこそ！")
+    print_keyboard_layout()
     input("Enterキーを押して開始...")
 
     while time.time() - start_time < total_time:
