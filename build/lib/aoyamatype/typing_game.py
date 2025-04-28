@@ -94,8 +94,8 @@ def print_log():
                 date_time = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S +0900")
                 total_words = int(total_words)
                 
-                # 過去1週間のデータのみ保持
-                if date_time >= datetime.now() - timedelta(days=7):
+                # 過去2週間のデータのみ保持
+                if date_time >= datetime.now() - timedelta(days=14):
                     training_dates.append(date_time)
                     training_scores.append(total_words)
 
@@ -150,7 +150,7 @@ def print_log():
     # トレーニング履歴のグラフ（過去1週間分）
     if training_dates and training_scores:
         ax1.plot(training_dates, training_scores, marker='o', color='g')
-        ax1.set_title("Training Scores Over Last 7 Days")
+        ax1.set_title("Training Scores Over Last 14 Days")
         ax1.set_xlabel("Date")
         ax1.set_ylabel("Score")
         ax1.grid(True)
@@ -226,11 +226,11 @@ def play_typing_game(lines, file_name):
     start_time = time.time()
 
     print("タイピングゲームへようこそ！")
-    print_keyboard_layout()
     input("Enterキーを押して開始...")
 
     while time.time() - start_time < total_time:
         line = lines[index % len(lines)]
+        print_keyboard_layout()
         print(f"{line}")
 
         user_input = None
