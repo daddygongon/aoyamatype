@@ -182,6 +182,9 @@ def record_skill_check_data(total_words, total_time):
     with open(speed_data_file, 'a', encoding='utf-8') as file:
         file.write(f"{date_str},{len(total_words)},{total_time},{total_characters}\n")
 
+def print_keyboard_layout():
+    print('hoge')
+    
 def skill_check(word_list_path):
     # word.list ファイルから単語を読み込む
     words = load_lines_from_file(word_list_path)
@@ -197,6 +200,7 @@ def skill_check(word_list_path):
     # タイピングゲームの開始
     for i, word in enumerate(selected_words, 1):
         while True:
+            print_keyboard_layout()
             print(f"{i}. {word}")
             user_input = get_user_input()
 
