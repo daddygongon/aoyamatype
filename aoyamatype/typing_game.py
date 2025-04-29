@@ -93,7 +93,7 @@ def print_log():
                 date_str, file_name, total_words, _ = parts
                 date_time = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S +0900")
                 total_words = int(total_words)
-                
+                total_time_spent += 60  # Each session is 60 seconds
  
                 if file_name not in logs:
                     logs[file_name] = {'last_date': date_str, 'total_words': total_words, 'count': 1}
@@ -102,7 +102,6 @@ def print_log():
                     logs[file_name]['total_words'] = total_words
                     logs[file_name]['count'] += 1
 
-                total_time_spent += 60  # Each session is 60 seconds
                 # 過去2週間のデータのみ保持
                 if date_time >= datetime.now() - timedelta(days=14):
                     training_dates.append(date_time)
@@ -152,7 +151,7 @@ def print_log():
     if training_dates and training_scores:
 #        ax1.plot(training_dates, training_scores, marker='o', color='g')
         ax1.plot(training_dates, training_scores, marker='o', color='g')
-        ax1.set_title("Training Scores Over Last 14 Days")
+        ax1.set_title("Training : integrated time in last 14 days")
         ax1.set_xlabel("Date")
         ax1.set_ylabel("Total training time [sec]")
         ax1.grid(True)
@@ -161,9 +160,9 @@ def print_log():
     # スキルチェック履歴のグラフ
     if skill_dates and skill_times:
         ax2.plot(skill_dates, skill_times, marker='o', color='b')
-        ax2.set_title("Skill Check Times Over Time")
+        ax2.set_title("Skill check: time over date")
         ax2.set_xlabel("Date")
-        ax2.set_ylabel("Time Taken (seconds)")
+        ax2.set_ylabel("Time taken [sec]")
         ax2.grid(True)
         ax2.tick_params(axis='x', rotation=45)
     
