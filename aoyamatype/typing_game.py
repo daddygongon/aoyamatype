@@ -94,11 +94,7 @@ def print_log():
                 date_time = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S +0900")
                 total_words = int(total_words)
                 
-                # 過去2週間のデータのみ保持
-                if date_time >= datetime.now() - timedelta(days=14):
-                    training_dates.append(date_time)
-                    training_scores.append(total_words)
-
+ 
                 if file_name not in logs:
                     logs[file_name] = {'last_date': date_str, 'total_words': total_words, 'count': 1}
                 else:
@@ -106,7 +102,12 @@ def print_log():
                     logs[file_name]['total_words'] = total_words
                     logs[file_name]['count'] += 1
 
-                total_time_spent += 20  # Each session is 20 seconds
+                total_time_spent += 60  # Each session is 60 seconds
+                # 過去2週間のデータのみ保持
+                if date_time >= datetime.now() - timedelta(days=14):
+                    training_dates.append(date_time)
+#                    training_scores.append(total_words)
+                    training_scores.append(total_time_spent)
 
         print(f"{'step':<10} | {'types':<5} | {'score':<11} | {'last_date':<20}")
         print('-' * 50)
@@ -149,10 +150,11 @@ def print_log():
     
     # トレーニング履歴のグラフ（過去1週間分）
     if training_dates and training_scores:
+#        ax1.plot(training_dates, training_scores, marker='o', color='g')
         ax1.plot(training_dates, training_scores, marker='o', color='g')
         ax1.set_title("Training Scores Over Last 14 Days")
         ax1.set_xlabel("Date")
-        ax1.set_ylabel("Score")
+        ax1.set_ylabel("Total training time [sec]")
         ax1.grid(True)
         ax1.tick_params(axis='x', rotation=45)
 
