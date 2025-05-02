@@ -93,7 +93,7 @@ def print_log():
                 date_str, file_name, total_words, _ = parts
                 date_time = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S +0900")
                 total_words = int(total_words)
-                total_time_spent += 60  # Each session is 60 seconds
+                total_time_spent += 1  # Each session is 60 seconds
  
                 if file_name not in logs:
                     logs[file_name] = {'last_date': date_str, 'total_words': total_words, 'count': 1}
@@ -115,8 +115,7 @@ def print_log():
             step_number = file_name.split('-')[1].split('.')[0]
             print(f"STEP-{step_number:<5} | {data['count']:<5} | {data['total_words']:<11} | {data['last_date']:<20}")
 
-        total_minutes, total_seconds = divmod(total_time_spent, 60)
-        total_hours, total_minutes = divmod(total_minutes, 60)
+        total_hours, total_minutes = divmod(total_time_spent, 60)
         print(f"\nTotal time spent typing: {total_hours}時間 {total_minutes}分")
     else:
         print("No training data found.")
@@ -153,7 +152,7 @@ def print_log():
         ax1.plot(training_dates, training_scores, marker='o', color='g')
         ax1.set_title("Training : integrated time in last 14 days")
         ax1.set_xlabel("Date")
-        ax1.set_ylabel("Total training time [sec]")
+        ax1.set_ylabel("Total training time [min]")
         ax1.grid(True)
         ax1.tick_params(axis='x', rotation=45)
 
