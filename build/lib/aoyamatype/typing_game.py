@@ -148,6 +148,7 @@ def print_log():
     
     # トレーニング履歴のグラフ（過去3ヶ月分）
     if training_dates and training_scores:
+        print(training_dates)
 #        ax1.plot(training_dates, training_scores, marker='o', color='g')
         ax1.plot(training_dates, training_scores, marker='o', color='g')
         ax1.set_title("Training : integrated time in last 90 days")
