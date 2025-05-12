@@ -103,7 +103,7 @@ def print_log():
                     logs[file_name]['count'] += 1
 
                 # 過去2週間のデータのみ保持
-                if date_time >= datetime.now() - timedelta(days=14):
+                if date_time >= datetime.now() - timedelta(days=90):
                     training_dates.append(date_time)
 #                    training_scores.append(total_words)
                     training_scores.append(total_time_spent)
@@ -146,11 +146,11 @@ def print_log():
     # グラフを並べて表示
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
     
-    # トレーニング履歴のグラフ（過去1週間分）
+    # トレーニング履歴のグラフ（過去3ヶ月分）
     if training_dates and training_scores:
 #        ax1.plot(training_dates, training_scores, marker='o', color='g')
         ax1.plot(training_dates, training_scores, marker='o', color='g')
-        ax1.set_title("Training : integrated time in last 14 days")
+        ax1.set_title("Training : integrated time in last 90 days")
         ax1.set_xlabel("Date")
         ax1.set_ylabel("Total training time [min]")
         ax1.grid(True)
